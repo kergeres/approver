@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Find every monster, creature and titan of movie universes.">
     <meta name="author" content="David Papp">
-    <title>Approver</title>
-    <link rel="shortcut icon" type="image/svg" href="img/tie.jpg" />
+    <title>MiM | Approver</title>
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/upload.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rbf3aat.css">
     <script src="https://kit.fontawesome.com/cf79351772.js" crossorigin="anonymous"></script>
 
 </head>
@@ -17,15 +18,21 @@
 <body>
 
     <header class="header-bar">
-        <h1>Approver</h1>
-        <button class="upload-btn-dstp"><a href="./sub/upload.html">upload</a></button>
+        <img class="header-logo-dktp">
+        <h1>MiM | Approver</h1>
+        <button class="upload-btn-dstp"><a href="./sub/upload.html"><i
+                    class="far fa-plus-square"></i>upload</a></button>
     </header>
     <main>
         <nav class="nnav">
 
             <input spellcheck="false" class="search-input" placeholder="search">
             <div class="item-title-container"></div>
-
+            <div class="logo-upld-container">
+                <img class="header-logo-ph" src="img/logo-withtext-dark.svg">
+                <button class="upload-btn-ph"><a href="./sub/upload.html"><i
+                            class="far fa-plus-square"></i>upload</a></button>
+            </div>
         </nav>
         <label for="mobileicon" class="ham-cont">
             <input id="mobileicon" type="checkbox">
@@ -41,13 +48,13 @@
 
     </main>
 
-    <script type="module" src="script/main.js"></script>
-    <script src="script/nav.js"></script>
-    <script type="modlue" src="script/upload.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script type="module" src="script/main.js"></script>
+    <script src="script/nav.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 </body>

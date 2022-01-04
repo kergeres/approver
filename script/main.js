@@ -183,115 +183,128 @@ function appendProfile(bejon) {
   let htmlTemplate = `
 
   <form class="upload-form">
-  <div class="user-field">
-      <div class="input-container">
-          <input id="firstname" type="text" name="firstname" autocomplete="on">
-          <label for="firstname">firstname</label>
-      </div>
-      <div class="input-container">
-          <input id="lastname" type="text" name="lastname" autocomplete="on">
-          <label for="lastname">lastname</label>
-      </div>
-      <div class="input-container">
-          <input id="email" type="email" name="email" autocomplete="on">
-          <label for="email">email</label>
-      </div>
-  </div>
+            <div class="user-field">
+                <div class="input-container firstname-container">
+                    <input id="firstname" type="text" name="firstname" autocomplete="on">
+                    <label for="firstname">firstname</label>
+                </div>
+                <div class="input-container lastname-container">
+                    <input id="lastname" type="text" name="lastname" autocomplete="on">
+                    <label for="lastname">lastname</label>
+                </div>
+                <div class="input-container email-container">
+                    <input id="email" type="email" name="email" autocomplete="on">
+                    <label for="email">email</label>
+                </div>
+                <div class="input-container uAge-container">
+                    <input id="uAge" type="text" name="uAge" autocomplete="of">
+                    <label for="uAge">Age</label>
+                </div>
+            </div>
 
-  <div class="content-field">
-      <input id="img-to-upload" type="file">
-      <div class="input-container">
-          <input id="mname" type="text" name="mname" autocomplete="of">
-          <label for="mname">Creature's name</label>
-          <button type="button"><i class="fas fa-plus"></i></button>
+            <div class="content-field">
+                <input id="img-to-upload" type="file">
+                <input id="img-to-uploadd" type="file">
+                <label for="img-to-upload">Choose image</label>
+                <div class="input-container mname-container">
+                    <input required id="mname" type="text" name="mname" autocomplete="of">
+                    <label class="addAble" for="mname">Creature's name</label>
 
-      </div>
+                </div>
 
-      <div id="appearance-container" class="input-container">
+                <div id="appearance-container" class="input-container appearance-container">
 
-          <input class="appearance 2" placeholder="appearance" type="text" name="appearance"
-              autocomplete="of">
-          <div id="extracontainer-appearance"></div>
-          <label for="appearance">appearance</label>
-          <button id="appearance-btn" type="button"><i class="fas fa-plus"></i></button>
+                    <input class="appearance 2" type="text" name="appearance" autocomplete="of">
+                    <div id="extracontainer-appearance"></div>
+                    <label class="addAbleA " for="appearance">appearance</label>
+                    <button id="appearance-btn" type="button"><i class="fas fa-plus"></i></button>
 
-      </div>
-      <div class="input-container-small ">
-          <input id="height" type="text" name="height" autocomplete="of">
-          <label for="height">height</label>
-          <!-- <button type="button"><i class="fas fa-plus"></i></button> -->
-          <select id="heightUnit">
-              <option>centimeter</option>
-              <option>meter</option>
-              <option>inches</option>
-              <option>feet</option>
-          </select>
+                </div>
+                <div class="input-container-small height-container">
+                    <input id="height" type="text" name="height" autocomplete="of">
+                    <label for="height">height</label>
+                    <!-- <button type="button"><i class="fas fa-plus"></i></button> -->
+                    <select id="heightUnit">
+                        <option>centimeter</option>
+                        <option>meter</option>
+                        <option>inches</option>
+                        <option>feet</option>
+                    </select>
 
-      </div>
-      <div class="input-container-small">
-          <input id="weight" type="text" name="weight" autocomplete="of">
-          <label for="weight">weight</label>
-          <!-- <button type="button"><i class="fas fa-plus"></i></button> -->
-          <select id="weightUnit">
-              <option>gram</option>
-              <option>kilogram</option>
-              <option>pound</option>
-          </select>
+                </div>
+                <div class="input-container-small weight-container">
+                    <input id="weight" type="text" name="weight" autocomplete="of">
+                    <label for="weight">weight</label>
+                    <!-- <button type="button"><i class="fas fa-plus"></i></button> -->
+                    <select id="weightUnit">
+                        <option>gram</option>
+                        <option>kilogram</option>
+                        <option>pound</option>
+                    </select>
 
-      </div>
-      <div class="input-container-small">
-          <input id="age" type="text" name="age" autocomplete="of">
-          <label for="age">age</label>
-      </div>
-      <div class="input-container-small">
-          <input maxlength="2" placeholder="dd" id="dd" type="text" name="dd" autocomplete="of">
-          <input maxlength="2" placeholder="mm" id="mm" type="text" name="mm" autocomplete="of">
-          <input maxlength="4" placeholder="yyyy" id="yyyy" type="text" name="yyyy" autocomplete="of">
-          <label for="dd">birth</label>
-      </div>
+                </div>
+                <div class="input-container-small age-container">
+                    <input id="age" type="text" name="age" autocomplete="of">
+                    <label for="age">age</label>
 
-      <div class="input-container-small">
-          <input id="pog" type="text" name="pog" autocomplete="of">
-          <label for="pog">place of origin</label>
-      </div>
-      <div id="ability-container" class="input-container-small">
-          <input placeholder="ability" class="ability 1" id="ability" type="text" name="ability"
-              autocomplete="of">
-          <div id="extracontainer-ability"></div>
-          <label for="ability">ability</label>
-          <button id="ability-btn" type="button"><i class="fas fa-plus"></i></button>
+                </div>
+                <div class="input-container-small birth-container">
+                    <div class="birth-container-small">
+                        <input minlength="2" maxlength="2" placeholder="dd" id="dd" type="text" name="dd"
+                            autocomplete="of">
+                        <input minlength="2" maxlength="2" placeholder="mm" id="mm" type="text" name="mm"
+                            autocomplete="of">
+                        <input minlength="4" maxlength="4" placeholder="yyyy" id="yyyy" type="text" name="yyyy"
+                            autocomplete="of">
+                    </div>
+                    <label class="addAble" for="birth">birth</label>
+                </div>
+                <div class="input-container-small pog-container">
+                    <input id="pog" type="text" name="pog" autocomplete="of">
+                    <label for="pog">place of origin</label>
+                </div>
+                <div class="input-container-small ageCalcQ-container">
+                    <input id="ageCalcQ" type="text" name="ageCalcQ" autocomplete="of">
+                    <label for="ageCalcQ">ageCalcQ</label>
+                </div>
+                <div id="ability-container" class="input-container-small ability-container">
+                    <input class="ability 1" id="ability" type="text" name="ability" autocomplete="of">
+                    <div id="extracontainer-ability"></div>
+                    <label for="ability">ability</label>
+                    <button id="ability-btn" type="button"><i class="fas fa-plus"></i></button>
 
-      </div>
-      <div id="creator-container" class="input-container-small">
-          <input class="1 creator" id="creator" type="text" name="creator" autocomplete="of">
-          <div id="extracontainer-creator"></div>
-          <label for="creator">creator</label>
-          <button id="creator-btn" type="button"><i class="fas fa-plus"></i></button>
+                </div>
+                <div id="creator-container" class="input-container-small creator-container">
+                    <input class="1 creator" id="creator" type="text" name="creator" autocomplete="of">
+                    <div id="extracontainer-creator"></div>
+                    <label for="creator">creator</label>
+                    <button id="creator-btn" type="button"><i class="fas fa-plus"></i></button>
 
-      </div>
-      <div class="input-container-small">
-          <input id="history" type="text" name="history" autocomplete="of">
-          <label for="history">History</label>
-      </div>
-      <div class="input-container-small">
-          <input id="about" type="text" name="about" autocomplete="of">
-          <label for="about">about</label>
-      </div> 
-       <div class="input-container-small">
-          <input id="ageCalcQ" type="text" name="ageCalcQ" autocomplete="of">
-          <label for="ageCalcQ">ageCalcQ</label>
-      </div>
+                </div>
+                <div class="history-container">
+                    <textarea id="history" type="text" name="history" autocomplete="of"></textarea>
+                    <label for="history">History</label>
+                </div>
+                <div class="about-container">
+                    <textarea id="about" type="text" name="about" autocomplete="of"></textarea>
+                    <label for="about">about</label>
+                </div>
 
-      <div id="extlinks-container" class="input-container-small">
-          <input class="1 extlinks" id="extlinks" type="text" name="extlinks" autocomplete="of">
-          <div id="extracontainer-extlinks"></div>
-          <label for="extlinks">external links</label>
-          <button id="extlinks-btn" type="button"><i class="fas fa-plus"></i></button>
-      </div>
-      <button id="submit" type="button">Approve</button>
+                <div id="extlinks-container" class="input-container-small extlinks-container">
+                    <input class="1 extlinks" id="extlinks" type="text" name="extlinks" autocomplete="of">
+                    <div id="extracontainer-extlinks"></div>
+                    <label for="extlinks">external links</label>
+                    <button id="extlinks-btn" type="button"><i class="fas fa-plus"></i></button>
+                </div>
+                <div class="submit-button-container">
 
-  </div>
-</form>`;
+                    <button id="toHomePage" type="button"><a href="../index.html">go back</a></button>
+                    <button id="submit" type="button">upload</button>
+                </div>
+
+
+            </div>
+        </form>`;
   document.querySelector(".content-container").innerHTML = htmlTemplate;
 
   for (let iterator of database) {
@@ -327,7 +340,7 @@ function appendProfile(bejon) {
       document.querySelector('#mm').value = iterator.monster.birth.mm
       document.querySelector('#yyyy').value = iterator.monster.birth.yyyy
       document.querySelector('#ageCalcQ').value = iterator.monster.birth.ageCalcQ
-      document.querySelector('.extlinks').value = iterator.monster.extlinks
+      document.querySelector('#extlinks').value = iterator.monster.extlinks
 
       fireStoreUpload(iterator.id)
       addAbi()
@@ -451,7 +464,7 @@ function fireStoreUpload(idToDelete) {
     // let creator = document.querySelector('#creator').value
     let history = document.querySelector('#history').value
     let about = document.querySelector('#about').value
-    let ageCalcQ = document.querySelector('#ageCalcQ').value
+    let ageCalcQ = document.querySelector('#ageCalcQ').value != "" ? document.querySelector('#ageCalcQ').value : ""
     // let extlinks = document.querySelector('#extlinks').value
 
     firebaseMonstersRef.doc().set(
