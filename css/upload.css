@@ -124,7 +124,7 @@ textarea {
   margin: 0 auto;
   padding: 72px 42px 32px 72px;
   display: grid;
-  grid-template-areas: "imgToUpload imgToUpload imgToUpload ." "imageSrc imageSrc . ." "mname mname appearance appearance" "height height weight weight" "age age birth birth" "pog pog ability ability" "creator creator extlinks extlinks" "history history history history" "about about about about" "submit submit submit submit   ";
+  grid-template-areas: "imgToUpload imgToUpload imgToUpload ." "imageSrc imageSrc ageCalcQ ageCalcQ" "mname mname appearance appearance" "height height weight weight" "age age birth birth" "pog pog ability ability" "creator creator extlinks extlinks" "history history history history" "about about about about" "submit submit submit submit   ";
 }
 .content-field .input-container {
   width: 323px;
@@ -343,6 +343,17 @@ textarea {
 }
 .imageSrc-container input {
   grid-area: imageSrcinput;
+}
+
+.ageCalcQ-container {
+  grid-area: ageCalcQ;
+  grid-template-areas: "ageCalcQlabel" "ageCalcQinput";
+}
+.ageCalcQ-container label [for=ageCalcQ] {
+  grid-area: ageCalcQlabel;
+}
+.ageCalcQ-container input {
+  grid-area: ageCalcQinput;
 }
 
 .birth-container {

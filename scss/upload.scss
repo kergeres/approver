@@ -123,7 +123,7 @@ textarea {
   display: grid;
   grid-template-areas:
     "imgToUpload imgToUpload imgToUpload ."
-    "imageSrc imageSrc . ."
+    "imageSrc imageSrc ageCalcQ ageCalcQ"
     "mname mname appearance appearance"
     "height height weight weight"
     "age age birth birth"
@@ -379,6 +379,20 @@ textarea {
   }
   input {
     grid-area: imageSrcinput;
+  }
+}
+
+.ageCalcQ-container {
+  grid-area: ageCalcQ;
+  grid-template-areas:
+    "ageCalcQlabel"
+    "ageCalcQinput";
+
+  label [for="ageCalcQ"] {
+    grid-area: ageCalcQlabel;
+  }
+  input {
+    grid-area: ageCalcQinput;
   }
 }
 
