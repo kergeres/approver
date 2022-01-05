@@ -334,7 +334,7 @@ function appendProfile(bejon) {
 
       document.querySelector('#mname').value = iterator.monster.mname
       document.querySelector('.appearance').value = iterator.monster.appearance
-      document.querySelector('#height').value = iterator.monster.appearance
+      document.querySelector('#height').value = iterator.monster.height
       document.querySelector('#heightUnit').value = iterator.monster.heightUnit
       document.querySelector('#weight').value = iterator.monster.weight
       document.querySelector('#weightUnit').value = iterator.monster.weightUnit
