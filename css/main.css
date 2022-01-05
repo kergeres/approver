@@ -27,25 +27,19 @@
 }
 
 .header-bar {
-  background-color: white;
+  background-color: #404040;
   width: 100%;
   height: 80px;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0px 1px 7px 2px rgba(0, 0, 0, 0.3);
   z-index: 5;
-  border-width: 3px;
-  border-bottom-style: solid;
-  position: fixed;
-  transition: 0.7s;
-  border-image: linear-gradient(to right, #070707, rgba(235, 235, 235, 0)) 1 100%;
 }
 .header-bar h1 {
   font-family: "poppins";
   letter-spacing: 1.5px;
   font-weight: lighter;
-  color: #404040;
+  color: white;
   cursor: context-menu;
   transition: 0.7s;
   font-size: 40px;
@@ -107,9 +101,9 @@ a:visited {
 main {
   /* background-color: $light-brown; */
   font-family: "poppins";
-  background-color: #fafafa;
+  background-color: #5a5a5a;
   width: 100%;
-  height: 1800px;
+  min-height: 2000px;
   cursor: default;
   padding-top: 100px;
   padding-bottom: 80px;
@@ -148,11 +142,11 @@ main {
 }
 
 nav {
-  background-color: #fafafa;
+  background-color: #5a5a5a;
   width: 200px;
   height: 1905px;
   border-right: 4px solid #c09a67;
-  color: #707070;
+  color: white;
   padding-left: 30px;
   padding-top: 14px;
   position: absolute;
@@ -168,6 +162,7 @@ nav p {
   line-height: 16px;
   cursor: pointer;
   font-family: "roboto";
+  color: white;
 }
 nav p:hover {
   color: #242424;

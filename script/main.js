@@ -200,9 +200,17 @@ function appendProfile(bejon) {
                     <input id="uAge" type="text" name="uAge" autocomplete="of">
                     <label for="uAge">Age</label>
                 </div>
+                
             </div>
 
+            <div class="image-contenct-container" > <img class="image-container"></div>
+           
             <div class="content-field">
+            <div class="input-container-small imageSrc-container">
+            <input id="imageSrc" type="text" name="imageSrc" autocomplete="of">
+            <label for="age">imageSrc</label>
+
+        </div>
                 <input id="img-to-upload" type="file">
                 <input id="img-to-uploadd" type="file">
                 <label for="img-to-upload">Choose image</label>
@@ -341,6 +349,8 @@ function appendProfile(bejon) {
       document.querySelector('#yyyy').value = iterator.monster.birth.yyyy
       document.querySelector('#ageCalcQ').value = iterator.monster.birth.ageCalcQ
       document.querySelector('#extlinks').value = iterator.monster.extlinks
+      document.querySelector('.image-container').src = iterator.monster.images[0]
+      document.querySelector('#imageSrc').value = iterator.monster.images[0]
 
       fireStoreUpload(iterator.id)
       addAbi()
@@ -464,6 +474,7 @@ function fireStoreUpload(idToDelete) {
     // let creator = document.querySelector('#creator').value
     let history = document.querySelector('#history').value
     let about = document.querySelector('#about').value
+    let imageSrc = document.querySelector('#imageSrc').value
     let ageCalcQ = document.querySelector('#ageCalcQ').value != "" ? document.querySelector('#ageCalcQ').value : ""
     // let extlinks = document.querySelector('#extlinks').value
 
@@ -495,7 +506,8 @@ function fireStoreUpload(idToDelete) {
           creator: creator,
           history: history,
           about: about,
-          extlinks: extlinks
+          extlinks: extlinks,
+          images: imageSrc
 
         }
 

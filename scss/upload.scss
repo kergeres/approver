@@ -102,6 +102,16 @@ textarea {
   display: none;
   height: auto;
 }
+.image-contenct-container {
+  width: 100%;
+  background-color: $content-field-bgco;
+  display: flex;
+  .image-container {
+    border: $border;
+    height: 200px;
+    margin: 20px auto;
+  }
+}
 .content-field {
   width: 782px;
   border-bottom-right-radius: 5px;
@@ -113,6 +123,7 @@ textarea {
   display: grid;
   grid-template-areas:
     "imgToUpload imgToUpload imgToUpload ."
+    "imageSrc imageSrc . ."
     "mname mname appearance appearance"
     "height height weight weight"
     "age age birth birth"
@@ -153,15 +164,6 @@ textarea {
       }
     }
   }
-  // #ability-container,
-  // #creator-container,
-  // #extlinks-container {
-  //   width: 300px;
-  //   .ability,
-  //   .creator {
-  //     margin-top: 5px;
-  //   }
-  // }
 
   .input-container-small {
     width: 300px;
@@ -365,6 +367,21 @@ textarea {
     grid-area: ageInput;
   }
 }
+
+.imageSrc-container {
+  grid-area: imageSrc;
+  grid-template-areas:
+    "imageSrclabel "
+    "imageSrcinput";
+
+  label [for="age"] {
+    grid-area: imageSrclabel;
+  }
+  input {
+    grid-area: imageSrcinput;
+  }
+}
+
 .birth-container {
   grid-area: birth;
   grid-template-areas:
@@ -614,6 +631,7 @@ label[for="img-to-upload"] {
       "email"
       "uAge";
   }
+
   .content-field {
     width: 98vw;
     padding: 32px 16px;
