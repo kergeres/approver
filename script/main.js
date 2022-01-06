@@ -331,6 +331,7 @@ function appendProfile(bejon) {
       document.querySelector('#firstname').value = iterator.user.firstname
       document.querySelector('#lastname').value = iterator.user.lastname
       document.querySelector('#email').value = iterator.user.email
+      document.querySelector('#uAge').value = iterator.user.age
 
       document.querySelector('#mname').value = iterator.monster.mname
       document.querySelector('.appearance').value = iterator.monster.appearance
@@ -464,6 +465,7 @@ function fireStoreUpload(idToDelete) {
     let weightUnit = document.querySelector('#weightUnit').value
     let stringBirth = `${document.querySelector('#yyyy').value}-${document.querySelector('#mm').value}-${document.querySelector('#dd').value}`
     let age = document.querySelector('#age').value != "" ? document.querySelector('#age').value : ""
+    let uAge = document.querySelector('#uAge').value != "" ? document.querySelector('#uAge').value : ""
     let birth = document.querySelector('#yyyy').value != "" ? new Date(parseInt(document.querySelector('#yyyy').value), parseInt(document.querySelector('#mm').value), parseInt(document.querySelector('#dd').value)) : (age * 31556952)
 
     let yyyy = document.querySelector('#yyyy').value
@@ -486,6 +488,7 @@ function fireStoreUpload(idToDelete) {
           firstname: firstname,
           lastname: lastname,
           email: email,
+          age: uAge,
         },
         monster: {
           mname: mname,
