@@ -350,8 +350,8 @@ function appendProfile(bejon) {
       document.querySelector('#yyyy').value = iterator.monster.birth.yyyy
       document.querySelector('#ageCalcQ').value = iterator.monster.birth.ageCalcQ
       document.querySelector('#extlinks').value = iterator.monster.extlinks
-      document.querySelector('.image-container').src = iterator.monster.images[0]
-      document.querySelector('#imageSrc').value = iterator.monster.images[0]
+      document.querySelector('.image-container').src = iterator.monster.images
+      document.querySelector('#imageSrc').value = iterator.monster.images
 
       fireStoreUpload(iterator.id)
       addAbi()
